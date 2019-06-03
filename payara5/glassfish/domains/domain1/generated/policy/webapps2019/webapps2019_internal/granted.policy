@@ -1,0 +1,51 @@
+/* AUTOMATICALLY GENERATED ON Mon Jun 03 11:52:48 BST 2019*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "getAllProjectsAwaitingApproval,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectTopicServiceBean", "registerProjectTopic,Local,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "proposeStudentProject,Local,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "login,Local,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "registerStudent,Local,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "getAllSupervisors,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "findProjectFromStringDesciption,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "LogServiceBean", "getAllLogs,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StringServiceBean", "getAllProjectsAwaitingApprovalAsStrings,Local,";
+  permission javax.security.jacc.EJBMethodPermission "LogServiceBean", "getAllLogsForUser,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "getListOfAllAvailableProjects,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "registerSupervisor,Local,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "StringServiceBean", "getAllSupervisorsAsStrings,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StringServiceBean", "extractIdFromString,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "rejectStudentProject,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "selectProjectAsStudent,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "canStudentPickAProject,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "getLoggedInStudent,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "getAllAdministrators,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "approveStudentProject,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "getAllApprovedProjects,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "getSupervisorBySussexId,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "getAllStudents,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StringServiceBean", "getStudentsCurrentProjectAsString,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "registerSystemUser,Local,java.lang.String,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "registerSupervisorProject,Local,java.lang.String,java.lang.String,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "getLoggedInSupervisor,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "registerAdministrator,Local,java.lang.String,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "determineUsergroupFromUsername,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "StringServiceBean", "getAllAvailableProjectsAsStrings,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StringServiceBean", "getAllApprovedProjectsAsStrings,Local,";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "logout,Local,";
+  permission javax.security.jacc.EJBMethodPermission "LogServiceBean", "AddNewLog,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "UserServiceBean", "getStudentBySussexId,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectTopicServiceBean", "getProjectTopicByTitle,Local,java.lang.String";
+  permission javax.security.jacc.EJBMethodPermission "ProjectTopicServiceBean", "getAllProjectTopicTitles,Local,";
+  permission javax.security.jacc.EJBMethodPermission "ProjectServiceBean", "unselectProject,Local,java.lang.String";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "LogServiceBean", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "StringServiceBean", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "ProjectTopicServiceBean", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "UserServiceBean", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "ProjectServiceBean", "**";
+};
+

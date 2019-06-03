@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Administrator Home</title>
+    </h:head>
+    <h:body>
+        <h2>Hello Administrator</h2>
+        <br/>
+        Register new users:
+        <br/>
+        <h:button value="Register New Administrator User" outcome="registerAdministrator"/>
+        <br/>
+        <h:button value="Register New Supervisor User" outcome="registerSupervisor"/>
+        <br/>
+        <h:button value="Register New Student User" outcome="registerStudent"/>
+        <br/>
+        -----------------------
+        <br/>
+        Unselect students from their project:
+        <br/>
+        <h:button value="Unselect Student Project" outcome="unselectStudentProject"/>
+        <br/>
+        -----------------------
+        <br/>
+        Register new project topics:
+        <br/>
+        <h:button value="Register New Project Topic" outcome="registerTopic"/>
+        <br/>
+        -----------------------
+        <br/>
+        View reports for all students:
+        <br/>
+        <h:button value="View Student Reports" outcome="viewStudentReports"/>
+        <br/>
+        -----------------------
+        <br/>
+        View all logs:
+        <br/>
+        <h:button value="View Logs" outcome="viewLogs"/>
+        <br/>
+        -----------------------
+        <br/>
+        <h:form>
+            <h:commandButton value="Logout" action="#{loginBean.logout()}"/>
+        </h:form>
+    </h:body>
+</html>
+

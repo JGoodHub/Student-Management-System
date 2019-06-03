@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.1"
+              xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+    
+    
+    <!-- ============================================ Administrator Folder ============================================ -->
+   
+    <!-- ====================== Admin Home ====================== -->
+    <navigation-rule>
+        <from-view-id>/administrators/administratorHome.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>registerAdministrator</from-outcome>
+            <to-view-id>/administrators/registerAdministrator.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>registerSupervisor</from-outcome>
+            <to-view-id>/administrators/registerSupervisor.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>registerStudent</from-outcome>
+            <to-view-id>/administrators/registerStudent.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>unselectStudentProject</from-outcome>
+            <to-view-id>/administrators/unselectStudentProject.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>registerTopic</from-outcome>
+            <to-view-id>/administrators/registerProjectTopic.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>viewStudentReports</from-outcome>
+            <to-view-id>/administrators/studentReports.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>viewLogs</from-outcome>
+            <to-view-id>/administrators/viewLogs.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>   
+    
+    <!-- ====================== Register Project Topic ====================== -->
+    <navigation-rule>
+        <from-view-id>/administrators/registerProjectTopic.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>registrationSuccess</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>backToHome</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>    
+    
+    <!-- ====================== Register Admin ====================== -->
+    <navigation-rule>
+        <from-view-id>/administrators/registerAdministrator.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>registrationSuccess</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>backToHome</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ====================== Register Supervisor ====================== -->
+    <navigation-rule>
+        <from-view-id>/administrators/registerSupervisor.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>registrationSuccess</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>backToHome</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ====================== Register Student ====================== -->
+    <navigation-rule>
+        <from-view-id>/administrators/registerStudent.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>registrationSuccess</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>backToHome</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ====================== Unselect Student Project ====================== -->
+    <navigation-rule>
+        <from-view-id>/administrators/unselectStudentProject.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>unselectionSuccess</from-outcome>
+            <to-view-id>/administrators/unselectStudentProject.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>backToHome</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ====================== View Student Reports ====================== -->
+    <navigation-rule>
+        <from-view-id>/administrators/studentReports.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>backToHome</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ====================== View Logs ====================== -->
+    <navigation-rule>
+        <from-view-id>/administrators/viewLogs.xhtml</from-view-id>        
+        <navigation-case>
+            <from-outcome>backToHome</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ============================================ Student Folder ============================================ -->             
+    
+    <!-- ====================== Student Home ====================== -->    
+    <navigation-rule>
+        <from-view-id>/students/studentHome.xhtml</from-view-id>        
+        <navigation-case>
+            <from-outcome>selectProject</from-outcome>
+            <to-view-id>/students/selectProject.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>proposeProject</from-outcome>
+            <to-view-id>/students/proposeProject.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>       
+    </navigation-rule>  
+    
+    <!-- ====================== Select Project ====================== -->    
+    <navigation-rule>
+        <from-view-id>/students/selectProject.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>projectChosen</from-outcome>
+            <to-view-id>/students/studentHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+    
+     <!-- ====================== Propose New Project ====================== -->    
+    <navigation-rule>
+        <from-view-id>/students/proposeProject.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>proposalSubmitted</from-outcome>
+            <to-view-id>/students/studentHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+    
+    <!-- ============================================ Supervisor Folder ============================================ -->
+    
+    <!-- ====================== Supervisor Home ====================== -->
+    <navigation-rule>
+        <from-view-id>/supervisors/supervisorHome.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>projectApproval</from-outcome>
+            <to-view-id>/supervisors/projectApproval.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registerProject</from-outcome>
+            <to-view-id>/supervisors/registerProject.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ====================== Register Project ====================== -->
+    <navigation-rule>
+        <from-view-id>/supervisors/registerProject.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>registrationSuccess</from-outcome>
+            <to-view-id>/supervisors/supervisorHome.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ====================== Project Approval ====================== -->
+    <navigation-rule>
+        <from-view-id>/supervisors/projectApproval.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>supervisorHome</from-outcome>
+            <to-view-id>/supervisors/supervisorHome.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>refreshApprovalsPage</from-outcome>
+            <to-view-id>/supervisors/projectApproval.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ============================================ Root Folder ============================================ -->
+    
+    <!-- ====================== Login Error Page ====================== -->
+    <navigation-rule>
+        <from-view-id>/error.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- ====================== Index Page ====================== -->
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ====================== Login Page ====================== -->
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>studentHome</from-outcome>
+            <to-view-id>/students/studentHome.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>supervisorHome</from-outcome>
+            <to-view-id>/supervisors/supervisorHome.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>administratorHome</from-outcome>
+            <to-view-id>/administrators/administratorHome.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/error.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>

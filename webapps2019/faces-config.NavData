@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only">
+        <Node id="login.xhtml" x="446" y="-91" zoom="true"/>
+        <Node id="error.xhtml" x="69" y="449" zoom="true"/>
+        <Node id="students/studentHome.xhtml" x="679" y="232" zoom="true"/>
+        <Node id="administrators/registration.xhtml" x="510" y="416" zoom="true"/>
+        <Node id="index.xhtml" x="235" y="328" zoom="true"/>
+        <Node id="administrators/administratorHome.xhtml" x="447" y="159" zoom="true"/>
+        <Node id="supervisors/supervisorHome.xhtml" x="117" y="62" zoom="true"/>
+    </Scope>
+    <Scope Scope="Project">
+        <Node id="error.xhtml" x="553" y="924" zoom="true"/>
+        <Node id="administrators/registerProjectTopic.xhtml" x="896" y="231" zoom="true"/>
+        <Node id="index.xhtml" x="689" y="206" zoom="true"/>
+        <Node id="students/selectProject.xhtml" x="133" y="150" zoom="true"/>
+        <Node id="students/proposeProject.xhtml" x="245" y="1054" zoom="true"/>
+        <Node id="administrators/registerSupervisor.xhtml" x="932" y="609" zoom="true"/>
+        <Node id="login.xhtml" x="437" y="673" zoom="true"/>
+        <Node id="students/studentHome.xhtml" x="195" y="873" zoom="true"/>
+        <Node id="administrators/administratorHome.xhtml" x="770" y="414" zoom="true"/>
+        <Node id="administrators/registerAdministrator.xhtml" x="856" y="890" zoom="true"/>
+        <Node id="administrators/registerStudent.xhtml" x="690" y="743" zoom="true"/>
+        <Node id="supervisors/supervisorHome.xhtml" x="243" y="305" zoom="true"/>
+        <Node id="supervisors/registerProject.xhtml" x="82" y="459" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations">
+        <Node id="error.xhtml" x="69" y="449" zoom="true"/>
+        <Node id="login.xhtml" x="446" y="-91" zoom="true"/>
+        <Node id="students/studentHome.xhtml" x="697" y="281" zoom="true"/>
+        <Node id="index.xhtml" x="235" y="328" zoom="true"/>
+        <Node id="administrators/registration.xhtml" x="466" y="383" zoom="true"/>
+        <Node id="administrators/administratorHome.xhtml" x="447" y="159" zoom="true"/>
+        <Node id="supervisors/supervisorHome.xhtml" x="117" y="62" zoom="true"/>
+    </Scope>
+</Scene>

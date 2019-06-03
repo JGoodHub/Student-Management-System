@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Project Approval</title>
+    </h:head>
+    <h:body>
+        <h2>Projects awaiting your approval</h2>
+        <br/>
+        <h:dataTable value="#{userBean.allProjectsAwaitingApproval}" var="project">
+            <h:column>    				
+               <f:facet name="header">Title</f:facet>    				
+                #{project.projectTitle}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">Topic</f:facet>    				
+                #{project.projectTopic.topicTitle}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">Student Name</f:facet>    				
+                #{project.projectStudent.firstName}
+                #{project.projectStudent.surname}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">Student ID</f:facet>    				
+                #{project.projectStudent.systemUserInstance.username}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">Description</f:facet>    				
+                #{project.projectDescription}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">Status</f:facet>    				
+                #{project.status}
+            </h:column>
+         </h:dataTable>
+        <br/>
+        <h2>Choose a project listed above to approval or reject</h2>
+        <h:form>
+            Project:
+            <h:selectOneMenu value="#{userBean.stringOfProjectToApproveOrReject}"> 
+                <f:selectItems value="#{userBean.allProjectsAwaitingApprovalAsStrings}"/>             
+            </h:selectOneMenu>
+            <br/>
+            <h:commandButton id="approveProject" type="submit" value="Approve" action="#{userBean.approveProject()}"/>
+            <h:commandButton id="rejectProject" type="submit" value="Reject" action="#{userBean.rejectProject()}"/>
+            <h:commandButton value="Back to Home" action="supervisorHome"/>
+        </h:form>
+    </h:body>
+</html>
+

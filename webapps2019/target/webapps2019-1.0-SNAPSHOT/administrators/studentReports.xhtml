@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Student Reports</title>
+    </h:head>
+    <h:body>
+        <h:link value="Back to Home" outcome="backToHome"/>
+        <h2>Student Reports</h2>
+        <h:dataTable value="#{userBean.allStudents}" var="student">
+            <h:column>    				
+               <f:facet name="header">Name</f:facet>    				
+                #{student.firstName} #{student.surname}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">Sussex ID</f:facet>    				
+                #{student.systemUserInstance.username}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">E-Mail</f:facet>    				
+                #{student.emailAddress}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">Course</f:facet>    				
+                #{student.courseTitle}
+            </h:column>
+            <h:column>    				
+               <f:facet name="header">Project Title/Status</f:facet>    				
+                #{student.studentsProjectStatusAsString}
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+

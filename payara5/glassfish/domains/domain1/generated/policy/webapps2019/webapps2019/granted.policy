@@ -1,0 +1,42 @@
+/* AUTOMATICALLY GENERATED ON Mon Jun 03 11:52:49 BST 2019*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.WebResourcePermission "/:/faces/students/*:/faces/supervisors/*:/faces/administrators/*";
+  permission javax.security.jacc.WebUserDataPermission "/:/faces/students/*:/faces/supervisors/*:/faces/administrators/*";
+  permission javax.security.jacc.WebUserDataPermission "/faces/administrators/*";
+  permission javax.security.jacc.WebUserDataPermission "/faces/students/*";
+  permission javax.security.jacc.WebUserDataPermission "/faces/supervisors/*";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
+  permission javax.security.jacc.WebRoleRefPermission "", "**";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "default", "**";
+};
+
+grant      principal org.glassfish.security.common.Group "students" {
+  permission javax.security.jacc.WebResourcePermission "/faces/students/*";
+  permission javax.security.jacc.WebRoleRefPermission "default", "students";
+  permission javax.security.jacc.WebRoleRefPermission "", "students";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "students";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "students";
+};
+
+grant      principal org.glassfish.security.common.Group "administrators" {
+  permission javax.security.jacc.WebResourcePermission "/faces/administrators/*";
+  permission javax.security.jacc.WebRoleRefPermission "default", "administrators";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "administrators";
+  permission javax.security.jacc.WebRoleRefPermission "", "administrators";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "administrators";
+};
+
+grant      principal org.glassfish.security.common.Group "supervisors" {
+  permission javax.security.jacc.WebResourcePermission "/faces/supervisors/*";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "supervisors";
+  permission javax.security.jacc.WebRoleRefPermission "", "supervisors";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "supervisors";
+  permission javax.security.jacc.WebRoleRefPermission "default", "supervisors";
+};
+

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>User Registration</title>
+    </h:head>
+    <h:body>
+        <h:link value="Back to Home" outcome="backToHome"/>
+        <h2>Fill in the student details below</h2>
+        <br/>
+        <h:form>
+            Fill in the details and press the register button.
+            <br/>
+            Username/Sussex ID:
+            <h:inputText id ="sussexId" value="#{registerBean.sussexId}" required="true" requiredMessage="Mandatory Field"/>
+            <h:message style="color:red" for="sussexId"/>
+            <br/>
+            Password:
+            <h:inputSecret id ="password" value="#{registerBean.password}" required="true" requiredMessage="Mandatory Field"/>
+            <h:message style="color:red" for="password"/>
+            <br/>
+            First Name:
+            <h:inputText id ="firstName" value="#{registerBean.firstName}" required="true" requiredMessage="Mandatory Field"/>
+            <h:message style="color:red" for="firstName"/>
+            <br/>
+            Last Name:
+            <h:inputText id ="surname" value="#{registerBean.surname}" required="true" requiredMessage="Mandatory Field"/>
+            <h:message style="color:red" for="surname"/>
+            <br/>
+            E-Mail Address:
+            <h:inputText id ="emailAddress" value="#{registerBean.emailAddress}" required="true" requiredMessage="Mandatory Field"/>
+            <h:message style="color:red" for="emailAddress"/>
+            <br/>
+            Course Title:
+            <h:inputText id ="courseTitle" value="#{registerBean.courseTitle}" required="true" requiredMessage="Mandatory Field"/>
+            <h:message style="color:red" for="courseTitle"/>
+            <br/>
+            <h:commandButton id="register" type="submit" value="Register" action="#{registerBean.registerStudent}"/>
+            <h:commandButton id="reset" type="reset" value="Clear Form" />
+        </h:form>
+    </h:body>
+</html>
+
